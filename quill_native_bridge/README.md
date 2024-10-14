@@ -60,3 +60,9 @@ Create the file `your_project/android/app/src/main/res/xml/file_paths.xml` with 
     <cache-path name="cache" path="." />
 </paths>
 ```
+
+## 🚧 Experimental
+
+This package is in early development despite the version since it previously had the same version as [flutter_quill](https://pub.dev/packages/flutter_quill), now they have been separated. The [Flutter Quill](https://github.com/singerdmx/flutter-quill/tree/master/.github/workflows) publishing workflow releases one stable version for all packages even if no changes were introduced.
+
+Fixing the version requires discounting the support for [quill_native_bridge](https://pub.dev/packages/quill_native_bridge) and publishing a new package.
