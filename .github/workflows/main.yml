@@ -1,0 +1,74 @@
+name: 🧪 Run Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  tests:
+    name: Check lints and tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: 🔍 Verify Flutter installation
+        run: flutter --version
+
+      # TODO: Might use https://pub.dev/packages/melos and move the packages (e.g., `quill_native_brdige`) into the 'packages' directory
+      
+      - name: 📦 Install quill_native_bridge dependencies
+        run: flutter pub get -C quill_native_bridge
+
+      - name: 📦 Install quill_native_bridge_android dependencies
+        run: flutter pub get -C quill_native_bridge_android
+
+      - name: 📦 Install quill_native_bridge_ios dependencies
+        run: flutter pub get -C quill_native_bridge_ios
+
+      - name: 📦 Install quill_native_bridge_linux dependencies
+        run: flutter pub get -C quill_native_bridge_linux
+
+      - name: 📦 Install quill_native_bridge_macos dependencies
+        run: flutter pub get -C quill_native_bridge_macos
+
+      - name: 📦 Install quill_native_bridge_platform_interface dependencies
+        run: flutter pub get -C quill_native_bridge_platform_interface
+
+      - name: 📦 Install quill_native_bridge_web dependencies
+        run: flutter pub get -C quill_native_bridge_web
+
+      - name: 📦 Install quill_native_bridge_windows dependencies
+        run: flutter pub get -C quill_native_bridge_windows
+
+      - name: 📦 Install the example's dependencies
+        run: flutter pub get -C quill_native_bridge/example --enforce-lockfile
+
+      - name: 🔍 Run Flutter analysis
+        run: flutter analyze
+
+      - name: 🧹 Check Dart code formatting
+        run: dart format --set-exit-if-changed .
+      
+      - name: 🔍 Preview Dart proposed changes
+        run: dart fix --dry-run
+
+      - name: 📦 Check if package is ready for publishing
+        run: flutter pub publish --dry-run
+
+      - name: 🧪 Run Flutter tests
+        run: flutter test
+
+      # TODO: Move integration tests step into a separate workflow with support for all platforms
+      - name: 🧪 Run Flutter integration tests
+        run: flutter test integration_test -d linux -C quill_native_bridge/example
+
