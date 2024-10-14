@@ -62,8 +62,16 @@ jobs:
       - name: 🔍 Preview Dart proposed changes
         run: dart fix --dry-run
 
-      - name: 📦 Check if package is ready for publishing
-        run: flutter pub publish --dry-run
+      - name: 📦 Check if packages are ready for publishing
+        run: |
+          flutter pub publish --dry-run -C quill_native_bridge
+          flutter pub publish --dry-run -C quill_native_bridge_platform_interface
+          flutter pub publish --dry-run -C quill_native_bridge_android
+          flutter pub publish --dry-run -C quill_native_bridge_ios
+          flutter pub publish --dry-run -C quill_native_bridge_macos
+          flutter pub publish --dry-run -C quill_native_bridge_linux
+          flutter pub publish --dry-run -C quill_native_bridge_windows
+          flutter pub publish --dry-run -C quill_native_bridge_web
 
       - name: 🧪 Run Flutter tests
         run: flutter test
