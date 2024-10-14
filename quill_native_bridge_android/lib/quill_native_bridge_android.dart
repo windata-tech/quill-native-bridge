@@ -71,13 +71,11 @@ class QuillNativeBridgeAndroid extends QuillNativeBridgePlatform {
     try {
       await _hostApi.copyImageToClipboard(imageBytes);
     } on PlatformException catch (e) {
-      // TODO: Update the link, issue and related info if this plugin
-      //  moved outside of flutter-quill repo
       if (kDebugMode && e.code == 'ANDROID_MANIFEST_NOT_CONFIGURED') {
         debugPrint(
           'It looks like your AndroidManifest.xml is not configured properly '
           'to support copying images to the clipboard on Android.\n'
-          "If you're interested in this feature, refer to https://github.com/singerdmx/flutter-quill#-platform-specific-configurations\n"
+          "If you're interested in this feature, refer to https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge#-platform-configuration\n"
           'This message will only shown in debug mode.\n'
           'Platform details: ${e.toString()}',
         );
@@ -107,6 +105,8 @@ class QuillNativeBridgeAndroid extends QuillNativeBridgePlatform {
     }
   }
 
+  // TODO: Create issue https://github.com/singerdmx/flutter-quill/issues/2243
+  //  in this repo and update the current references to the new issue
   /// Should be only used internally for [getClipboardGif] and [getClipboardImage]
   /// for **Android only**.
   ///

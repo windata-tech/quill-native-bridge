@@ -71,7 +71,7 @@ class QuillNativeBridge {
   ///
   /// Require modifying `AndroidManifest.xml` to work on **Android**.
   /// Otherwise, you will get a warning available only on debug-builds.
-  /// See: https://github.com/singerdmx/flutter-quill#-platform-specific-configurations
+  /// See: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge#-platform-configuration
   ///
   /// **Important for web**: If [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)
   /// is not supported on the web browser, should fallback to [Clipboard Events](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent)
