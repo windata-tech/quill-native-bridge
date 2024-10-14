@@ -286,7 +286,7 @@ packages:
       path: "../quill_native_bridge_platform_interface"
       relative: true
     source: path
-    version: "0.0.1-dev.2"
+    version: "0.0.1-dev.3"
   sky_engine:
     dependency: transitive
     description: flutter

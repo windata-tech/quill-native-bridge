@@ -244,49 +244,49 @@ packages:
       path: "../../quill_native_bridge_android"
       relative: true
     source: path
-    version: "0.0.1-dev.1"
+    version: "0.0.1-dev.2"
   quill_native_bridge_ios:
     dependency: "direct overridden"
     description:
       path: "../../quill_native_bridge_ios"
       relative: true
     source: path
-    version: "0.0.1-dev.1"
+    version: "0.0.1-dev.2"
   quill_native_bridge_linux:
     dependency: "direct overridden"
     description:
       path: "../../quill_native_bridge_linux"
       relative: true
     source: path
-    version: "0.0.1-dev.1"
+    version: "0.0.1-dev.2"
   quill_native_bridge_macos:
     dependency: "direct overridden"
     description:
       path: "../../quill_native_bridge_macos"
       relative: true
     source: path
-    version: "0.0.1-dev.1"
+    version: "0.0.1-dev.2"
   quill_native_bridge_platform_interface:
     dependency: "direct overridden"
     description:
       path: "../../quill_native_bridge_platform_interface"
       relative: true
     source: path
-    version: "0.0.1-dev.2"
+    version: "0.0.1-dev.3"
   quill_native_bridge_web:
     dependency: "direct overridden"
     description:
       path: "../../quill_native_bridge_web"
       relative: true
     source: path
-    version: "0.0.1-dev.2"
+    version: "0.0.1-dev.3"
   quill_native_bridge_windows:
     dependency: "direct overridden"
     description:
       path: "../../quill_native_bridge_windows"
       relative: true
     source: path
-    version: "0.0.1-dev.1"
+    version: "0.0.1-dev.2"
   sky_engine:
     dependency: transitive
     description: flutter

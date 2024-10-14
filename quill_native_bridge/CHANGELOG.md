@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 10.7.8
+
+- Experimental changes in https://github.com/singerdmx/flutter-quill/pull/2230 (WIP). Not intended for public use as breaking changes will occur.
+- Moved the package repo from https://github.com/singerdmx/flutter-quill to https://github.com/FlutterQuill/quill-native-bridge
+
 ## 10.7.7
 
 - Highly experimental changes in https://github.com/singerdmx/flutter-quill/pull/2230 (WIP). Not intended for public use as breaking changes will occur. Not stable yet.
