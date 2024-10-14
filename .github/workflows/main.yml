@@ -66,14 +66,13 @@ jobs:
 
       - name: 🧪 Run Flutter tests
         run: |
-          (cd quill_native_bridge && flutter test) &&
-          (cd quill_native_bridge_platform_interface && flutter test) &&
-          (cd quill_native_bridge_android && flutter test) &&
-          (cd quill_native_bridge_ios && flutter test) &&
-          (cd quill_native_bridge_macos && flutter test) &&
-          (cd quill_native_bridge_windows && flutter test) &&
-          (cd quill_native_bridge_linux && flutter test) &&
-          (cd quill_native_bridge_web && flutter test)
+          for package in quill_native_bridge quill_native_bridge_platform_interface quill_native_bridge_android quill_native_bridge_ios quill_native_bridge_macos quill_native_bridge_windows quill_native_bridge_linux quill_native_bridge_web; do
+            if [ -d "$package/test" ]; then
+              (cd "$package" && flutter test)
+            else
+              echo "No test directory found for $package. Skipping."
+            fi
+          done
 
       # TODO: Move integration tests step into a separate workflow with support for all platforms
       - name: 🧪 Run Flutter integration tests
