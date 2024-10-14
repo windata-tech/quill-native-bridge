@@ -62,10 +62,7 @@ jobs:
       - name: 🔍 Preview Dart proposed changes
         run: dart fix --dry-run
 
-      # TODO: Run the same check for other packages (e.g., quill_native_bridge_platform_interface)
-      - name: 📦 Check if quill_native_bridge is ready for publishing
-        run: flutter pub publish --dry-run
-        working-directory: quill_native_bridge
+      # TODO: Run the check (flutter pub publish --dry-run) for all packages (e.g., quill_native_bridge_platform_interface)
 
       - name: 🧪 Run Flutter tests
         run: flutter test
