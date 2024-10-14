@@ -65,9 +65,18 @@ jobs:
       # TODO: Run the check (flutter pub publish --dry-run) for all packages (e.g., quill_native_bridge_platform_interface)
 
       - name: 🧪 Run Flutter tests
-        run: flutter test
+        run: |
+          (cd quill_native_bridge && flutter test) &&
+          (cd quill_native_bridge_platform_interface && flutter test) &&
+          (cd quill_native_bridge_android && flutter test) &&
+          (cd quill_native_bridge_ios && flutter test) &&
+          (cd quill_native_bridge_macos && flutter test) &&
+          (cd quill_native_bridge_windows && flutter test) &&
+          (cd quill_native_bridge_linux && flutter test) &&
+          (cd quill_native_bridge_web && flutter test)
 
       # TODO: Move integration tests step into a separate workflow with support for all platforms
       - name: 🧪 Run Flutter integration tests
-        run: flutter test integration_test -d linux -C quill_native_bridge/example
+        run: flutter test integration_test -d linux
+        working-directory: quill_native_bridge/example
 
