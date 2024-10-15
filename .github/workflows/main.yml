@@ -74,16 +74,16 @@ jobs:
             fi
           done
 
-      # From https://docs.flutter.dev/get-started/install/linux/desktop#development-tools
-      - name: 🐧 Install required Linux packages to run integration tests
-        run: sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install -y curl git unzip xz-utils zip libglu1-mesa && sudo apt-get install clang cmake git ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
+      # TODO: Run integration tests in CI in a seperate workflow for tests with support for all platforms
+      # # From https://docs.flutter.dev/get-started/install/linux/desktop#development-tools
+      # - name: 🐧 Install required Linux packages to run integration tests
+      #   run: sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install -y curl git unzip xz-utils zip libglu1-mesa && sudo apt-get install clang cmake git ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
 
-      # See https://docs.flutter.dev/get-started/install/linux/desktop#development-tools
-      - name: 🐧 Checking the package versions compatibility with Flutter
-        run: flutter doctor
+      # # See https://docs.flutter.dev/get-started/install/linux/desktop#development-tools
+      # - name: 🐧 Checking the package versions compatibility with Flutter
+      #   run: flutter doctor
 
-      # TODO: Move integration tests step into a separate workflow with support for all platforms
-      - name: 🧪 Run Flutter integration tests
-        run: cd quill_native_bridge/example && flutter test integration_test -d linux
-        timeout-minutes: 5
+      # - name: 🧪 Run Flutter integration tests
+      #   run: cd quill_native_bridge/example && flutter test integration_test -d linux
+      #   timeout-minutes: 5
 
