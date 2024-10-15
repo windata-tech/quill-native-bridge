@@ -84,7 +84,6 @@ jobs:
 
       # TODO: Move integration tests step into a separate workflow with support for all platforms
       - name: 🧪 Run Flutter integration tests
-        run: flutter test integration_test -d linux
-        working-directory: quill_native_bridge/example
+        run: cd quill_native_bridge/example && flutter test integration_test -d linux
         timeout-minutes: 5
 
