@@ -90,7 +90,7 @@ class MethodChannelQuillNativeBridge implements QuillNativeBridgePlatform {
     );
   }
 
-  // TODO: getClipboardImage() should not return gif files on macOS and iOS, same as Android impl
+  // TODO: getClipboardImage() should not return gif files on macOS and iOS, same as Android impl https://github.com/FlutterQuill/quill-native-bridge/issues/5
 
   @override
   Future<Uint8List?> getClipboardImage() async {
