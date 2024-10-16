@@ -10,7 +10,6 @@ linter:
     avoid_print: true
     avoid_types_on_closure_parameters: true
     avoid_void_async: true
-    cascade_invocations: true
     directives_ordering: true
     omit_local_variable_types: true
     prefer_const_constructors: true

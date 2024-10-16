@@ -21,8 +21,6 @@ class _PigeonCodec extends StandardMessageCodec {
   void writeValue(WriteBuffer buffer, Object? value) {
     if (value is int) {
       buffer.putUint8(4);
-      // TODO: Workaround to https://github.com/flutter/packages/pull/7735
-      // ignore: cascade_invocations
       buffer.putInt64(value);
     } else {
       super.writeValue(buffer, value);
