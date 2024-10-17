@@ -26,7 +26,7 @@ dependencies:
   quill_native_bridge_web: ^0.0.1-dev.4
   quill_native_bridge_windows: ^0.0.1-dev.3
   quill_native_bridge_linux: ^0.0.1-dev.3
-  quill_native_bridge_ios: ^0.0.1-dev.3
+  quill_native_bridge_ios: ^0.0.1-dev.4
   quill_native_bridge_macos: ^0.0.1-dev.2
 
 dev_dependencies:
