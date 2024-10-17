@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.1-dev.4
+
+- Fix the bug [singerdmx/flutter-quill #2316](https://github.com/singerdmx/flutter-quill/issues/2316) by removing the invalid usage of implementing the iOS plugin in the platform interface.
+
 ## 0.0.1-dev.3
 
 - Experimental changes in https://github.com/singerdmx/flutter-quill/pull/2230 (WIP). Not intended for public use as breaking changes will occur.
