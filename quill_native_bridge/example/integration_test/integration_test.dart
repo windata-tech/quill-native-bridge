@@ -9,6 +9,7 @@ import 'package:quill_native_bridge_example/assets.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
+  // TODO: Write tests for copying other image formats (jpeg, webp, png etc...)
   group('getClipboardImage and copyImageToClipboard', () {
     test('copying images to the clipboard should make them accessible',
         () async {

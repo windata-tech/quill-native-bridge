@@ -30,11 +30,17 @@ class QuillNativeBridgeImpl: QuillNativeBridgeApi {
     }
     
     func getClipboardImage() throws -> FlutterStandardTypedData? {
-        let image = UIPasteboard.general.image
-        guard let data = image?.pngData() else {
-            return nil
+        let pasteboard = UIPasteboard.general
+        if pasteboard.hasImages {
+            let image = pasteboard.image
+            if let imagePngData = image?.pngData() {
+                return FlutterStandardTypedData(bytes: imagePngData)
+            }
         }
-        return FlutterStandardTypedData(bytes: data)
+        if let imageWebpData = pasteboard.data(forPasteboardType: "org.webmproject.webp") {
+            return FlutterStandardTypedData(bytes: imageWebpData)
+        }
+        return nil
     }
     
     func getClipboardGif() throws -> FlutterStandardTypedData? {
