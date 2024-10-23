@@ -13,7 +13,7 @@ export 'package:quill_native_bridge_platform_interface/src/platform_feature.dart
 /// An internal plugin for [`flutter_quill`](https://pub.dev/packages/flutter_quill)
 /// package to access platform-specific APIs.
 ///
-/// See [QuillNativeBridgeFeature] to check whatever if a feature is supported.
+/// Use [QuillNativeBridge.isSupported] to check whether a feature is supported.
 class QuillNativeBridge {
   QuillNativeBridge._();
 
@@ -40,6 +40,8 @@ class QuillNativeBridge {
   ///
   /// Always check the docs of the method you're calling to see if there
   /// are special notes.
+  ///
+  /// Also see: [QuillNativeBridgeFeature]
   static Future<bool> isSupported(QuillNativeBridgeFeature feature) =>
       _platform.isSupported(feature);
 
