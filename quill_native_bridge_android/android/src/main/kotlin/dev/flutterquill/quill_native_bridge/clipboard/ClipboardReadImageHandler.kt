@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Build
-import androidx.core.graphics.decodeBitmap
 import dev.flutterquill.quill_native_bridge.generated.FlutterError
 import java.io.ByteArrayOutputStream
 import java.io.FileNotFoundException
@@ -175,7 +174,7 @@ object ClipboardReadImageHandler {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                 // Api 29 and above (use a newer API)
                 val source = ImageDecoder.createSource(context.contentResolver, imageUri)
-                source.decodeBitmap { _, _ -> }
+                ImageDecoder.decodeBitmap(source)
             } else {
                 // Backward compatibility with older versions
                 checkNotNull(context.contentResolver.openInputStream(imageUri)) {
