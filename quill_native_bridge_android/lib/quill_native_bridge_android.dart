@@ -9,7 +9,7 @@ import 'src/messages.g.dart';
 
 /// An implementation of [QuillNativeBridgePlatform] for Android.
 ///
-/// **Highly Experimental** and can be removed.
+/// **Experimental** and might be changed.
 ///
 /// Should extends [QuillNativeBridgePlatform] and not implements it as error will arise:
 ///
@@ -129,6 +129,7 @@ class QuillNativeBridgeAndroid extends QuillNativeBridgePlatform {
         'This can happen on app restart or lifecycle changes.\n'
         'This is known issue on Android and this message will be only shown in debug mode.\n'
         'Refer to https://github.com/singerdmx/flutter-quill/issues/2243 for discussion.\n'
+        'A similar but unrelated issue in Flutter `imager_picker`: https://github.com/flutter/flutter/issues/100025'
         'Platform details: ${e.toString()}',
       );
     }
