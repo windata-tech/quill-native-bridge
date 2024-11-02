@@ -9,6 +9,7 @@ class QuillNativeBridgeImpl: QuillNativeBridgeApi {
         return false
 #endif
     }
+    // TODO: Should not hardcode public.html and instead use UTType.html.identifier
     
     func getClipboardHtml() throws -> String? {
         guard let htmlData = UIPasteboard.general.data(forPasteboardType: "public.html") else {

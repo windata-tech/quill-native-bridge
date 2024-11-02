@@ -21,6 +21,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   pigeon: ^22.4.0
 
+# TODO: Support Swift Package Manager for both iOS and macOS https://pub.dev/packages/quill_native_bridge/score
 flutter:
   plugin:
     implements: quill_native_bridge

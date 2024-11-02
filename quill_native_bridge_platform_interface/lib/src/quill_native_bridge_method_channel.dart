@@ -1,3 +1,4 @@
+// TODO: Avoid importing dart:io directly. https://pub.dev/packages/quill_native_bridge/score
 import 'dart:io' as io show Platform;
 
 import 'package:flutter/foundation.dart';
