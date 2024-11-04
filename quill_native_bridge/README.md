@@ -2,7 +2,7 @@
 
 An internal plugin for [`flutter_quill`](https://pub.dev/packages/flutter_quill) package to access platform-specific APIs.
 
-> **NOTE**
+> [!NOTE]
 >
 > **Internal Use Only**: Exclusively for `flutter_quill`. Breaking changes may occur.
 
@@ -23,7 +23,7 @@ If not set up, a warning will appear in the log during debug mode only
 if `copyImageToClipboard` was called without configuring the Android project.
 An exception with less details will be thrown in production mode.
 
-> **IMPORTANT**
+> [!IMPORTANT]
 >
 > This configuration is required on **Android** platform for using `copyImageToClipboard`.
 > Other features on Android will work without it if this method isn't used.
