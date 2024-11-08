@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.1-dev.5
+
+- Added `QuillNativeBridgeFeature.getClipboardFiles` to the `QuillNativeBridgeWeb.isSupported` switch, preventing `UnimplementedError` at runtime.
+
 ## 0.0.1-dev.4
 
 - Require `quill_native_bridge_platform_interface` minimum version `0.0.1-dev.4`.

@@ -42,12 +42,14 @@ class QuillNativeBridgeWeb extends QuillNativeBridgePlatform {
         return isClipboardApiSupported;
       case QuillNativeBridgeFeature.getClipboardGif:
         return false;
-      // Without this default check, adding new item to the enum will be a breaking change
-      default:
-        throw UnimplementedError(
-          'Checking if `${feature.name}` is supported on the web is not covered.',
-        );
+      case QuillNativeBridgeFeature.getClipboardFiles:
+        return false;
     }
+    // Without this default, adding a new item to the enum will be a breaking change.
+    // ignore: dead_code
+    throw UnimplementedError(
+      'Checking if `${feature.name}` is supported on the web is not covered.',
+    );
   }
 
   @override
