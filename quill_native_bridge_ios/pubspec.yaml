@@ -1,6 +1,6 @@
 name: quill_native_bridge_ios
 description: "iOS implementation of the quill_native_bridge plugin."
-version: 0.0.1-dev.4
+version: 0.0.1-dev.5
 homepage: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge_ios
 repository: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge_ios
 issue_tracker: https://github.com/FlutterQuill/quill-native-bridge/issues?q=is%3Aissue+is%3Aopen+label%3A%22platform-ios%22
@@ -19,9 +19,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-  pigeon: ^22.4.0
+  pigeon: ^22.6.2
 
-# TODO: Support Swift Package Manager for both iOS and macOS https://pub.dev/packages/quill_native_bridge/score
 flutter:
   plugin:
     implements: quill_native_bridge
