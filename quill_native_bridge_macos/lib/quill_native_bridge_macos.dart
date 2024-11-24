@@ -7,31 +7,12 @@ import 'package:quill_native_bridge_platform_interface/quill_native_bridge_platf
 import 'src/messages.g.dart';
 
 /// An implementation of [QuillNativeBridgePlatform] for macOS.
-///
-/// **Highly Experimental** and can be removed.
-///
-/// Should extends [QuillNativeBridgePlatform] and not implements it as error will arise:
-///
-/// ```console
-/// Assertion failed: "Platform interfaces must not be implemented with `implements`"
-/// ```
-///
-/// See [Flutter #127396](https://github.com/flutter/flutter/issues/127396)
-/// and [QuillNativeBridgePlatform] for more details.
 class QuillNativeBridgeMacOS extends QuillNativeBridgePlatform {
-  QuillNativeBridgeMacOS._({
-    @visibleForTesting QuillNativeBridgeApi? api,
-  }) : _hostApi = api ?? QuillNativeBridgeApi();
-
-  final QuillNativeBridgeApi _hostApi;
+  final QuillNativeBridgeApi _hostApi = QuillNativeBridgeApi();
 
   /// Registers this class as the default instance of [QuillNativeBridgePlatform].
   static void registerWith() {
-    assert(
-      defaultTargetPlatform == TargetPlatform.macOS && !kIsWeb,
-      '$QuillNativeBridgeMacOS should be only used for macOS.',
-    );
-    QuillNativeBridgePlatform.instance = QuillNativeBridgeMacOS._();
+    QuillNativeBridgePlatform.instance = QuillNativeBridgeMacOS();
   }
 
   @override

@@ -13,22 +13,10 @@ import 'src/html_formatter.dart';
 
 /// A Windows implementation of the [QuillNativeBridgePlatform].
 ///
-/// **Highly Experimental** and can be removed.
-///
-/// Should extends [QuillNativeBridgePlatform] and not implements it as error will arise:
-///
-/// ```console
-/// Assertion failed: "Platform interfaces must not be implemented with `implements`"
-/// ```
-///
-/// See [Flutter #127396](https://github.com/flutter/flutter/issues/127396)
-/// and [QuillNativeBridgePlatform] for more details.
-/// ```
+/// **Highly Experimental** and subject to changes.
 class QuillNativeBridgeWindows extends QuillNativeBridgePlatform {
-  QuillNativeBridgeWindows._();
-
   static void registerWith() {
-    QuillNativeBridgePlatform.instance = QuillNativeBridgeWindows._();
+    QuillNativeBridgePlatform.instance = QuillNativeBridgeWindows();
   }
 
   @override

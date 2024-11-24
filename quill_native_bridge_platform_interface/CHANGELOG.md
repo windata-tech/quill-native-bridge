@@ -2,9 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.1-dev.5
+
+- Removes the default method channel implementation (`MethodChannelQuillNativeBridge`) since it's no longer needed; platform packages have different implementations.
+- Adds pub topics to package metadata.
+- Minor changes in doc comments.
+
 ## 0.0.1-dev.4
 
-- Fix the bug [singerdmx/flutter-quill #2316](https://github.com/singerdmx/flutter-quill/issues/2316) by removing the invalid usage of implementing the iOS plugin in the platform interface.
+- Fix the bug [singerdmx/flutter-quill#2316](https://github.com/singerdmx/flutter-quill/issues/2316) by removing the invalid usage of implementing the iOS plugin in the platform interface.
 
 ## 0.0.1-dev.3
 

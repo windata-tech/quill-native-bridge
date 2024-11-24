@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 10.7.11
+
+- Adds pub topics to package metadata.
+- Updates minimum versions of platform implementation dependencies.
+- Removes redundant `platforms` in package metadata.
+
 ## 10.7.10
 
 - Support Swift package manager.

@@ -12,22 +12,9 @@ import 'src/clipboard_api_support_unsafe.dart';
 import 'src/mime_types_constants.dart';
 
 /// A web implementation of the [QuillNativeBridgePlatform].
-///
-/// **Highly Experimental** and can be removed.
-///
-/// Should extends [QuillNativeBridgePlatform] and not implements it as error will arise:
-///
-/// ```console
-/// Assertion failed: "Platform interfaces must not be implemented with `implements`"
-/// ```
-///
-/// See [Flutter #127396](https://github.com/flutter/flutter/issues/127396)
-/// and [QuillNativeBridgePlatform] for more details.
 class QuillNativeBridgeWeb extends QuillNativeBridgePlatform {
-  QuillNativeBridgeWeb._();
-
   static void registerWith(Registrar registrar) {
-    QuillNativeBridgePlatform.instance = QuillNativeBridgeWeb._();
+    QuillNativeBridgePlatform.instance = QuillNativeBridgeWeb();
   }
 
   @override

@@ -1,10 +1,11 @@
 name: quill_native_bridge_platform_interface
 description: "A common platform interface for the quill_native_bridge plugin."
-version: 0.0.1-dev.4
+version: 0.0.1-dev.5
 homepage: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge_platform_interface
 repository: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge_platform_interface
 issue_tracker: https://github.com/FlutterQuill/quill-native-bridge/issues
 documentation: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge_platform_interface
+topics: [clipboard, os-integration, quill-native-bridge, quill, flutter-quill]
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -13,7 +14,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.1.8
+  plugin_platform_interface: ^2.1.7
 
 dev_dependencies:
   flutter_test:

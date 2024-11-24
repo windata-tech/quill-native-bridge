@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.1-dev.6
+
+- Adds pub topics to package metadata.
+- Minor changes in doc comments.
+
 ## 0.0.1-dev.5
 
 - Support Swift Package Manager.

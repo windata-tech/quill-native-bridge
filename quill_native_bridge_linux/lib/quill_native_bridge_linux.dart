@@ -13,23 +13,9 @@ import 'src/mime_types_constants.dart';
 import 'src/temp_file_utils.dart';
 
 /// A Linux implementation of the [QuillNativeBridgePlatform].
-///
-/// **Highly Experimental** and can be removed.
-///
-/// Should extends [QuillNativeBridgePlatform] and not implements it as error will arise:
-///
-/// ```console
-/// Assertion failed: "Platform interfaces must not be implemented with `implements`"
-/// ```
-///
-/// See [Flutter #127396](https://github.com/flutter/flutter/issues/127396)
-/// and [QuillNativeBridgePlatform] for more details.
-/// ```
 class QuillNativeBridgeLinux extends QuillNativeBridgePlatform {
-  QuillNativeBridgeLinux._();
-
   static void registerWith() {
-    QuillNativeBridgePlatform.instance = QuillNativeBridgeLinux._();
+    QuillNativeBridgePlatform.instance = QuillNativeBridgeLinux();
   }
 
   @override

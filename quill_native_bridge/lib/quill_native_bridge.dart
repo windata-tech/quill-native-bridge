@@ -14,9 +14,7 @@ export 'package:quill_native_bridge_platform_interface/src/platform_feature.dart
 /// package to access platform-specific APIs.
 ///
 /// Use [QuillNativeBridge.isSupported] to check whether a feature is supported.
-class QuillNativeBridge {
-  QuillNativeBridge._();
-
+abstract final class QuillNativeBridge {
   static QuillNativeBridgePlatform get _platform =>
       QuillNativeBridgePlatform.instance;
 
