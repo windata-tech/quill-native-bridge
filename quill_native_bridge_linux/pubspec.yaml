@@ -1,6 +1,6 @@
 name: quill_native_bridge_linux
 description: "Linux implementation of the quill_native_bridge plugin."
-version: 0.0.1-dev.4
+version: 0.0.1
 homepage: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge_linux
 repository: https://github.com/FlutterQuill/quill-native-bridge/tree/main/quill_native_bridge_linux
 issue_tracker: https://github.com/FlutterQuill/quill-native-bridge/issues?q=is%3Aissue+is%3Aopen+label%3A%22platform-linux%22
@@ -14,7 +14,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  quill_native_bridge_platform_interface: ^0.0.1-dev.4
+  quill_native_bridge_platform_interface: ^0.0.1
+  file_selector_linux: ^0.9.1+1
+  file_selector_platform_interface: ^2.4.0
 
 dev_dependencies:
   flutter_test:
@@ -22,6 +24,8 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   crypto: ^3.0.5
   yaml: ^3.1.2
+  mockito: ^5.4.4
+  build_runner: ^2.4.13
 
 flutter:
   assets:
