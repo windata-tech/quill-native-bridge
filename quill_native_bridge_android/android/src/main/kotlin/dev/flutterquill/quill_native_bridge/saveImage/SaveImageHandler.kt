@@ -6,6 +6,8 @@ import android.content.pm.PackageManager
 import android.media.MediaScannerConnection
 import android.os.Build
 import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
 import android.util.Log
 import androidx.core.app.ActivityCompat
@@ -199,7 +201,9 @@ object SaveImageHandler {
                             )
                             return true
                         } finally {
-                            activityPluginBinding.removeRequestPermissionsResultListener(this)
+                            Handler(Looper.getMainLooper()).post {
+                                activityPluginBinding.removeRequestPermissionsResultListener(this)
+                            }
                         }
                     }
                 })
