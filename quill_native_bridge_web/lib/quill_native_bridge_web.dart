@@ -148,7 +148,7 @@ class QuillNativeBridgeWeb extends QuillNativeBridgePlatform {
     );
     final url = URL.createObjectURL(blob);
 
-    final link = document.createElement('a') as HTMLAnchorElement;
+    final link = HTMLAnchorElement();
     link.setAttribute('href', url);
     link.setAttribute(
         'download', '${options.fileExtension}.${options.fileExtension}');

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## NEXT
+
+- Creates the anchor element (`<a>`) in a type-safe way using `HTMLAnchorElement` without casting in `saveImage`.
+
 ## 0.0.1
 
 - Adds support for saving images.
