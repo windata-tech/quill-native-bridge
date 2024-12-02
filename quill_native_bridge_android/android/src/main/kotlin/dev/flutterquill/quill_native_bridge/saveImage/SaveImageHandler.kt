@@ -170,13 +170,13 @@ object SaveImageHandler {
                             if (requestCode != WRITE_TO_EXTERNAL_STORAGE_REQUEST_CODE) {
                                 return false
                             }
-                            val onlyWriteExternalStorageIsRequested = permissions.contentEquals(
+                            val isWriteExternalStoragePermissionRequested = permissions.contentEquals(
                                 arrayOf(WRITE_EXTERNAL_STORAGE_PERMISSION_NAME)
                             )
-                            if (!onlyWriteExternalStorageIsRequested) {
+                            if (!isWriteExternalStoragePermissionRequested) {
                                 Log.w(
                                     QuillNativeBridgePlugin.TAG,
-                                    "The only expected permission that's requested is ${WRITE_EXTERNAL_STORAGE_PERMISSION_NAME}."
+                                    "Unexpected permissions requested. Expected only [$WRITE_EXTERNAL_STORAGE_PERMISSION_NAME], but received: ${permissions.joinToString()}."
                                 )
                             }
                             val isGranted =
