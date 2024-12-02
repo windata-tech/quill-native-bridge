@@ -7,6 +7,7 @@ import 'assets.dart';
 import 'select_image_dialog.dart';
 
 /// Creates a global instance of [QuillNativeBridge], allowing it to be overridden in tests.
+@visibleForTesting
 QuillNativeBridge quillNativeBridge = QuillNativeBridge();
 
 void main() => runApp(const MainApp());
