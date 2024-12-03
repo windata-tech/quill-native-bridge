@@ -134,6 +134,7 @@ class QuillNativeBridge {
   ///
   /// The [GalleryImageSaveOptions.name] is the image's name without the extension (e.g., `image`).
   /// It doesn't need to be unique, as it's handled by the gallery/system.
+  /// On Android 9 (API 28) and earlier, this is handled by the plugin.
   ///
   /// The [GalleryImageSaveOptions.fileExtension] is the image's file extension (e.g., `png`).
   /// This is silently ignored on macOS and iOS.
