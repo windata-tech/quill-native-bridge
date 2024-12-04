@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.1+2
+
+- Setup [native unit tests](https://docs.flutter.dev/testing/testing-plugins#native-unit-tests) to test plugin platform functionality.
+
 ## 0.0.1+1
 
 - Fixes a crash that can happen on Android API 28 and earlier when permission is denied. [Related comment with more details](https://github.com/singerdmx/flutter-quill/pull/2403#discussion_r1866055681).

@@ -1,6 +1,7 @@
 package dev.flutterquill.quill_native_bridge
 
 import android.util.Log
+import androidx.annotation.VisibleForTesting
 import dev.flutterquill.quill_native_bridge.generated.QuillNativeBridgeApi
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -12,8 +13,11 @@ class QuillNativeBridgePlugin : FlutterPlugin, ActivityAware {
         const val TAG = "QuillNativeBridgePlugin"
     }
 
-    private var pluginApi: QuillNativeBridgeImpl? = null
-    private var activityPluginBinding: ActivityPluginBinding? = null
+    @VisibleForTesting
+    internal var pluginApi: QuillNativeBridgeImpl? = null
+
+    @VisibleForTesting
+    internal var activityPluginBinding: ActivityPluginBinding? = null
 
     override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         val pluginApi = QuillNativeBridgeImpl(binding.applicationContext)
@@ -55,12 +59,14 @@ class QuillNativeBridgePlugin : FlutterPlugin, ActivityAware {
         )
     }
 
-    private fun setActivityPluginBinding(binding: ActivityPluginBinding, methodName: String) {
+    @VisibleForTesting
+    internal fun setActivityPluginBinding(binding: ActivityPluginBinding, methodName: String) {
         activityPluginBinding = binding
         pluginApi?.setActivityPluginBinding(binding) ?: logApiNotSetError(methodName)
     }
 
-    private fun disposeActivityPluginBinding(methodName: String) {
+    @VisibleForTesting
+    internal fun disposeActivityPluginBinding(methodName: String) {
         activityPluginBinding = null
         pluginApi?.setActivityPluginBinding(null) ?: logApiNotSetError(methodName)
     }
