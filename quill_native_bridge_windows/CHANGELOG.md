@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## NEXT
+
+- Migrates from deprecated APIs of [win32](https://pub.dev/packages/win32/) package.
+
 ## 0.0.1
 
 - Adds support for saving images.

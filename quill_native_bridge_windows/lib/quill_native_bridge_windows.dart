@@ -135,8 +135,7 @@ class QuillNativeBridgeWindows extends QuillNativeBridgePlatform {
       final unitSize = sizeOf<Uint8>();
       final htmlSize = (htmlPointer.length + 1) * unitSize;
 
-      final clipboardMemoryHandle =
-          GlobalAlloc(GLOBAL_ALLOC_FLAGS.GMEM_MOVEABLE, htmlSize);
+      final clipboardMemoryHandle = GlobalAlloc(GMEM_MOVEABLE, htmlSize);
       if (clipboardMemoryHandle == nullptr) {
         assert(
           false,
@@ -223,8 +222,7 @@ class QuillNativeBridgeWindows extends QuillNativeBridgePlatform {
     final uriPtr = TEXT('ms-photos:');
     final openPtr = 'open'.toNativeUtf16();
 
-    ShellExecute(
-        NULL, openPtr, uriPtr, nullptr, nullptr, SHOW_WINDOW_CMD.SW_SHOWNORMAL);
+    ShellExecute(NULL, openPtr, uriPtr, nullptr, nullptr, SW_SHOWNORMAL);
 
     free(uriPtr);
     free(openPtr);
