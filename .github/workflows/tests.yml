@@ -10,7 +10,7 @@ jobs:
     strategy:
       # This prevents one failure from stopping the entire run.
       fail-fast: false
-      # TODO: Restore windows, run Android and iOS unit tests, cache swift-format
+      # TODO: Restore windows, run Android and iOS unit tests.
       matrix:
         os: [ubuntu, macos]
     runs-on: ${{ matrix.os }}-latest
