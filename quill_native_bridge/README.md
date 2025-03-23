@@ -114,7 +114,7 @@ await QuillNativeBridge().saveImage(imageBytes, options: ImageSaveOptions(name: 
 **To check whether the current web app is running on a browser**:
 
 ```dart
-await QuillNativeBridge().isAppleBrowser(); // Returns false on non-web platforms.
+await QuillNativeBridge().isAppleSafari(); // Returns false on non-web platforms.
 ```
 
 ## 🔧 Setup
