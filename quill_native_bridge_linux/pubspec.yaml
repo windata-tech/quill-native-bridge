@@ -15,7 +15,11 @@ dependencies:
   flutter:
     sdk: flutter
   quill_native_bridge_platform_interface: ^0.0.1+1
-  file_selector_linux: ^0.9.1+1
+  file_selector_linux:
+    git:
+      url: https://github.com/windata-tech/wd_image_picker.git
+      ref: main
+      path: packages/file_selector/file_selector_linux/
   file_selector_platform_interface:
     git:
       url: https://github.com/windata-tech/wd_image_picker.git
